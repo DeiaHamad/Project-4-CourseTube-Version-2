@@ -741,7 +741,7 @@ function App() {
   }
 
   const coursesList = coursesLogo.map((course) => {
-    const imgSrc = `./Project-4-CourseTube-Version-2/img/${course}.png`;
+    const imgSrc = `/Project-4-CourseTube-Version-2/img/${course}.png`;
     const ID = setId(course);
 
     return (
@@ -773,7 +773,7 @@ function App() {
   // Instructors
   const instructorsList = coursesData.map((instructor) => {
     const { name } = instructor;
-    const imgSrc = `./Project-4-CourseTube-Version-2/img/instructors/${name}/logo.jpg`;
+    const imgSrc = `/Project-4-CourseTube-Version-2/img/instructors/${name}/logo.jpg`;
 
     return (
       <Instructor
@@ -816,7 +816,7 @@ function App() {
           } = course;
           const jpgExtension = ".jpg";
           const webpExtension = ".webp";
-          const src = `./Project-4-CourseTube-Version-2/img/instructors/${name}/${category.toLowerCase()}`;
+          const src = `/Project-4-CourseTube-Version-2/img/instructors/${name}/${category.toLowerCase()}`;
           const videoImgSrc =
             name === "London App Brewery"
               ? `${src}${jpgExtension}`
