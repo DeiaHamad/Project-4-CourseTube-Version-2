@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Project-4-CourseTube-Version-2/static/css/main.0577752c.css",
+    "main.js": "/Project-4-CourseTube-Version-2/static/js/main.fb6f2384.js",
+    "index.html": "/Project-4-CourseTube-Version-2/index.html",
+    "main.0577752c.css.map": "/Project-4-CourseTube-Version-2/static/css/main.0577752c.css.map",
+    "main.fb6f2384.js.map": "/Project-4-CourseTube-Version-2/static/js/main.fb6f2384.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0577752c.css",
+    "static/js/main.fb6f2384.js"
+  ]
+}
