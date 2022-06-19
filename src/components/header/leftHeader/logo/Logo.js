@@ -4,7 +4,10 @@ import PropTypes from "prop-types";
 function Logo(props) {
   return (
     <div className="logo" onClick={props.handleClick} data-testid="logo-div">
-      <img src="/img/logo.png" alt="CourseTube Logo" />
+      <img
+        src="/Project-4-CourseTube-Version-2/img/logo.png"
+        alt="CourseTube Logo"
+      />
     </div>
   );
 }
