@@ -1,8 +1,7 @@
-import React from "react";
-import CourseTube from "./courseTube/CourseTube";
-import ContactMe from "./contactMe/ContactMe";
-
-import PropTypes from "prop-types";
+import React from 'react';
+import CourseTube from './courseTube/CourseTube';
+import ContactMe from './contactMe/ContactMe';
+import PropTypes from 'prop-types';
 
 function Main(props) {
   const { mainClass, secondaryClass } = props.section;
@@ -29,10 +28,6 @@ function Main(props) {
     gridTemplateColumns: `repeat(${sliderValue}, 1fr)`,
   };
 
-  // console.log(courseTube);
-  // console.log(typeof courseTube[0]);
-  // console.log(typeof courseTube[1]);
-  // console.log(typeof courseTube[2]);
   return (
     <main className={toggleBtn ? secondaryClass : mainClass}>
       {displayMain && (

@@ -1,19 +1,19 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext } from 'react';
 import SpeechRecognition, {
   useSpeechRecognition,
-} from "react-speech-recognition";
-import "./App.css";
-import Header from "./components/header/Header";
-import Sidebar from "./components/sidebar/Sidebar";
-import Main from "./components/main/Main";
-import Colors from "./components/header/rightHeader/color/Colors";
-import Course from "./components/sidebar/courses/course/Course";
-import Instructor from "./components/sidebar/instructors/instructor/Instructor";
-import Video from "./components/main/courseTube/video/Video";
-import coursesLogo from "./data/coursesLogo";
-import coursesData from "./data/coursesData";
-import colorData from "./data/colorData";
-import { nanoid } from "nanoid";
+} from 'react-speech-recognition';
+import './App.css';
+import Header from './components/header/Header';
+import Sidebar from './components/sidebar/Sidebar';
+import Main from './components/main/Main';
+import Colors from './components/header/rightHeader/color/Colors';
+import Course from './components/sidebar/courses/course/Course';
+import Instructor from './components/sidebar/instructors/instructor/Instructor';
+import Video from './components/main/courseTube/video/Video';
+import coursesLogo from './data/coursesLogo';
+import coursesData from './data/coursesData';
+import colorData from './data/colorData';
+import { nanoid } from 'nanoid';
 
 export const ThemeContext = createContext(null);
 
@@ -31,7 +31,7 @@ function App() {
     displayMiddleHeader: true,
     displayMiniSearchButton: false,
     displaySearchArrowBtn: false,
-    searchValue: "",
+    searchValue: '',
     // === Right Header === //
     displayRightHeader: true,
     displayMiniOptionsButton: false,
@@ -49,21 +49,21 @@ function App() {
     innerWidth: window.innerWidth,
     // Contact Me Btn
     contactMeBtn: true,
-    nameValue: "",
-    emailValue: "",
-    subjectValue: "",
-    messageValue: "",
+    nameValue: '',
+    emailValue: '',
+    subjectValue: '',
+    messageValue: '',
     // Close Btn
     closeBtn: false,
     // === User === //
     displayUser: true,
   });
 
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
 
   const [sidebarSection, setSidebarSection] = useState({
-    mainClass: "",
-    secondaryClass: "",
+    mainClass: '',
+    secondaryClass: '',
     home: true,
     courses: true,
     instructors: true,
@@ -71,15 +71,15 @@ function App() {
   });
 
   const [mainSection, setMainSection] = useState({
-    mainClass: "",
-    secondaryClass: "",
+    mainClass: '',
+    secondaryClass: '',
     displayMain: true,
     displayContact: false,
     displayAllCourses: true,
     seekingCourse: false,
-    requiredCourse: "",
+    requiredCourse: '',
     seekingInstructor: false,
-    requiredInstructor: "",
+    requiredInstructor: '',
   });
 
   const [courseTube, setCourseTube] = useState();
@@ -122,65 +122,65 @@ function App() {
     const userTargetsInstructor = checkInstructor(userInput);
 
     function checkCourse(userInput) {
-      let keyword = "";
+      let keyword = '';
       if (
-        userInput.includes("html") &&
-        userInput.includes("css") &&
-        userInput.includes("javascript")
+        userInput.includes('html') &&
+        userInput.includes('css') &&
+        userInput.includes('javascript')
       ) {
-        keyword = "htmlCssJavascript";
-      } else if (userInput.includes("html") && userInput.includes("css")) {
-        keyword = "htmlCss";
-      } else if (userInput.includes("html")) {
-        keyword = "html";
-      } else if (userInput.includes("css")) {
-        keyword = "css";
-      } else if (userInput.includes("javascript")) {
-        keyword = "javascript";
+        keyword = 'htmlCssJavascript';
+      } else if (userInput.includes('html') && userInput.includes('css')) {
+        keyword = 'htmlCss';
+      } else if (userInput.includes('html')) {
+        keyword = 'html';
+      } else if (userInput.includes('css')) {
+        keyword = 'css';
+      } else if (userInput.includes('javascript')) {
+        keyword = 'javascript';
       } else if (
-        (userInput.includes("web") && userInput.includes("development")) ||
-        userInput.includes("web")
+        (userInput.includes('web') && userInput.includes('development')) ||
+        userInput.includes('web')
       ) {
-        keyword = "webDevelopment";
-      } else if (userInput.includes("python")) {
-        keyword = "python";
-      } else if (userInput.includes("react")) {
-        keyword = "react";
-      } else if (userInput.includes("sass")) {
-        keyword = "sass";
+        keyword = 'webDevelopment';
+      } else if (userInput.includes('python')) {
+        keyword = 'python';
+      } else if (userInput.includes('react')) {
+        keyword = 'react';
+      } else if (userInput.includes('sass')) {
+        keyword = 'sass';
       }
 
       return keyword;
     }
 
     function checkInstructor(userInput) {
-      let keyword = "";
-      if (userInput.includes("bro") && userInput.includes("code")) {
-        keyword = "Bro Code";
+      let keyword = '';
+      if (userInput.includes('bro') && userInput.includes('code')) {
+        keyword = 'Bro Code';
       } else if (
-        userInput.includes("london") &&
-        userInput.includes("app") &&
-        userInput.includes("brewery")
+        userInput.includes('london') &&
+        userInput.includes('app') &&
+        userInput.includes('brewery')
       ) {
-        keyword = "London App Brewery";
-      } else if (userInput.includes("london") && userInput.includes("app")) {
-        keyword = "London App Brewery";
+        keyword = 'London App Brewery';
+      } else if (userInput.includes('london') && userInput.includes('app')) {
+        keyword = 'London App Brewery';
       } else if (
-        userInput.includes("free") &&
-        userInput.includes("code") &&
-        userInput.includes("camp")
+        userInput.includes('free') &&
+        userInput.includes('code') &&
+        userInput.includes('camp')
       ) {
-        keyword = "freeCodeCamp.org";
-      } else if (userInput.includes("free") && userInput.includes("code")) {
-        keyword = "freeCodeCamp.org";
+        keyword = 'freeCodeCamp.org';
+      } else if (userInput.includes('free') && userInput.includes('code')) {
+        keyword = 'freeCodeCamp.org';
       } else if (
-        userInput.includes("super") &&
-        userInput.includes("simple") &&
-        userInput.includes("dev")
+        userInput.includes('super') &&
+        userInput.includes('simple') &&
+        userInput.includes('dev')
       ) {
-        keyword = "SuperSimpleDev";
-      } else if (userInput.includes("super") && userInput.includes("simple")) {
-        keyword = "SuperSimpleDev";
+        keyword = 'SuperSimpleDev';
+      } else if (userInput.includes('super') && userInput.includes('simple')) {
+        keyword = 'SuperSimpleDev';
       }
 
       return keyword;
@@ -192,7 +192,7 @@ function App() {
   function handleSearchInputKeyDown(e) {
     const [course, instructor] = handleSearchValue();
 
-    if (e.key === "Enter") {
+    if (e.key === 'Enter') {
       if (course) {
         handleCourseClick(course);
       } else if (instructor) {
@@ -202,14 +202,14 @@ function App() {
       setHeaderSection((prevHeaderSection) => {
         return {
           ...prevHeaderSection,
-          searchValue: "",
+          searchValue: '',
         };
       });
     } else if (e.keyCode === 27) {
       setHeaderSection((prevHeaderSection) => {
         return {
           ...prevHeaderSection,
-          searchValue: "",
+          searchValue: '',
         };
       });
     }
@@ -252,7 +252,7 @@ function App() {
     setHeaderSection((prevHeaderSection) => {
       return {
         ...prevHeaderSection,
-        searchValue: "",
+        searchValue: '',
       };
     });
   }
@@ -281,7 +281,7 @@ function App() {
       setHeaderSection((prevHeaderSection) => {
         return {
           ...prevHeaderSection,
-          searchValue: "",
+          searchValue: '',
         };
       });
     }
@@ -364,7 +364,7 @@ function App() {
       });
     }
 
-    window.addEventListener("resize", watchWidth);
+    window.addEventListener('resize', watchWidth);
 
     // ================ Notes ================ //
     // 1) toggleBtn => (initially) = false.
@@ -405,20 +405,20 @@ function App() {
 
     // Phone
     if (innerWidth <= 450) {
-      device = "phone";
+      device = 'phone';
       minMiddleHeader = true;
       minRightHeader = true;
       minGridNum = 0;
       maxGridNum = 0;
     } else if (innerWidth <= 500) {
-      device = "phone";
+      device = 'phone';
       minMiddleHeader = true;
       minRightHeader = true;
       sideBarArrowBtn = true;
       minGridNum = 1;
       maxGridNum = 2;
     } else if (innerWidth <= 585) {
-      device = "phone";
+      device = 'phone';
       minMiddleHeader = true;
       minRightHeader = true;
       sideBarArrowBtn = true;
@@ -427,41 +427,41 @@ function App() {
     }
     // iPad
     else if (innerWidth <= 810) {
-      device = "iPad";
+      device = 'iPad';
       minRightHeader = true;
       minGridNum = 1;
       maxGridNum = 2;
     } else if (innerWidth <= 880) {
-      device = "iPad";
+      device = 'iPad';
       minGridNum = 1;
       maxGridNum = 3;
     } else if (innerWidth <= 1000) {
-      device = "iPad";
+      device = 'iPad';
       minGridNum = 2;
       maxGridNum = 3;
     }
     // Desktop / Pc
     else if (innerWidth <= 1300) {
-      device = "desktop";
+      device = 'desktop';
       minGridNum = 2;
       maxGridNum = 3;
     } else if (innerWidth <= 1600) {
-      device = "desktop";
+      device = 'desktop';
       minGridNum = 3;
       maxGridNum = 4;
     } else {
-      device = "desktop";
+      device = 'desktop';
       minGridNum = 3;
       maxGridNum = 5;
     }
 
     function setClass(device) {
-      if (device === "phone") {
-        return ["sidebar-off", "main-full", "sidebar-min", "main-max"];
-      } else if (device === "iPad") {
-        return ["sidebar-min", "main-max", "sidebar-off", "main-full"];
+      if (device === 'phone') {
+        return ['sidebar-off', 'main-full', 'sidebar-min', 'main-max'];
+      } else if (device === 'iPad') {
+        return ['sidebar-min', 'main-max', 'sidebar-off', 'main-full'];
       } else {
-        return ["sidebar-max", "main-min", "sidebar-min", "main-max"];
+        return ['sidebar-max', 'main-min', 'sidebar-min', 'main-max'];
       }
     }
 
@@ -538,10 +538,10 @@ function App() {
     setHeaderSection((prevHeaderSection) => {
       return {
         ...prevHeaderSection,
-        nameValue: "",
-        emailValue: "",
-        subjectValue: "",
-        messageValue: "",
+        nameValue: '',
+        emailValue: '',
+        subjectValue: '',
+        messageValue: '',
       };
     });
   }
@@ -633,9 +633,9 @@ function App() {
 
   // Arrow Btn
   function handleArrowBtnClick(id) {
-    if (id === "sidebarArrowBtn") {
+    if (id === 'sidebarArrowBtn') {
       handleToggleBtnClick();
-    } else if (id === "rightHeaderArrowBtn") {
+    } else if (id === 'rightHeaderArrowBtn') {
       if (innerWidth <= 585) {
         setHeaderSection((prevHeaderSection) => {
           return {
@@ -678,7 +678,7 @@ function App() {
   // ================ Sidebar ================ //
   // Titles (Home, Courses, Instructors)
   function handleSidebarTitlesClick(target) {
-    if (target === "home") {
+    if (target === 'home') {
       setSidebarSection((prevSidebarSection) => {
         return {
           ...prevSidebarSection,
@@ -701,7 +701,7 @@ function App() {
         return {
           ...prevSidebarSection,
           [target]:
-            target === "courses"
+            target === 'courses'
               ? !prevSidebarSection.courses
               : !prevSidebarSection.instructors,
         };
@@ -711,9 +711,9 @@ function App() {
 
   // Courses
   function setId(input) {
-    let id = "";
+    let id = '';
     let capIndex = [];
-    let emptySpace = " ";
+    let emptySpace = ' ';
 
     input = input.toLowerCase();
 
@@ -733,7 +733,7 @@ function App() {
 
     for (let letter of id) {
       if (letter === emptySpace) {
-        id = id.replace(letter, "");
+        id = id.replace(letter, '');
       }
     }
 
@@ -814,14 +814,14 @@ function App() {
             courseTitle,
             courseDetails,
           } = course;
-          const jpgExtension = ".jpg";
-          const webpExtension = ".webp";
+          const jpgExtension = '.jpg';
+          const webpExtension = '.webp';
           const src = `/Project-4-CourseTube-Version-2/img/instructors/${name}/${category.toLowerCase()}`;
           const videoImgSrc =
-            name === "London App Brewery"
+            name === 'London App Brewery'
               ? `${src}${jpgExtension}`
               : `${src}${webpExtension}`;
-          const channelLogo = `/img/instructors/${name}/logo.jpg`;
+          const channelLogo = `/Project-4-CourseTube-Version-2/img/instructors/${name}/logo.jpg`;
           const ID = nanoid();
 
           if (mainSection.displayAllCourses) {
