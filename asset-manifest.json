@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Project-4-CourseTube-Version-2/static/css/main.0577752c.css",
-    "main.js": "/Project-4-CourseTube-Version-2/static/js/main.bc4d0ca6.js",
+    "main.js": "/Project-4-CourseTube-Version-2/static/js/main.f4a99131.js",
     "index.html": "/Project-4-CourseTube-Version-2/index.html",
     "main.0577752c.css.map": "/Project-4-CourseTube-Version-2/static/css/main.0577752c.css.map",
-    "main.bc4d0ca6.js.map": "/Project-4-CourseTube-Version-2/static/js/main.bc4d0ca6.js.map"
+    "main.f4a99131.js.map": "/Project-4-CourseTube-Version-2/static/js/main.f4a99131.js.map"
   },
   "entrypoints": [
     "static/css/main.0577752c.css",
-    "static/js/main.bc4d0ca6.js"
+    "static/js/main.f4a99131.js"
   ]
 }
